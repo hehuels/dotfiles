@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+STOW_FOLDERS="nvim,tmux,zsh"
+
+mkdir -p $HOME/.config/nvim
+mkdir -p $HOME/.config/tmux
+
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+	echo "stow $folder"
+	stow -D $folder -t $HOME
+	stow $folder -t $HOME
+done

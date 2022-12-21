@@ -1,0 +1,8 @@
+# ALIAS
+alias watch='watch '
+alias sudo='sudo '
+alias vi='nvim'
+alias vim='nvim'
+
+# env
+export EDITOR='nvim'
