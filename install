@@ -1,9 +1,10 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS="nvim,tmux,zsh"
+STOW_FOLDERS="bin,nvim,tmux,zsh"
 
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.config/tmux
+mkdir -p $HOME/.local/scripts
 
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do

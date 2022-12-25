@@ -1,3 +1,15 @@
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
 # ALIAS
 alias watch='watch '
 alias sudo='sudo '
@@ -6,3 +18,9 @@ alias vim='nvim'
 
 # env
 export EDITOR='nvim'
+
+# keybindings
+bindkey -s ^f "tmux-sessionizer\n"
+
+# PATH
+addToPathFront "$HOME/.local/scripts"
