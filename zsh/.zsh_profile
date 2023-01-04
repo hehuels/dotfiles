@@ -24,3 +24,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # PATH
 addToPathFront "$HOME/.local/scripts"
+
+if [[ $(uname) -eq "Darwin" ]]; then
+    addToPathFront "$HOME/Library/Python/3.9/bin/"
+fi
