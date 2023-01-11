@@ -10,6 +10,7 @@ if [[ $selected == "new" ]]; then
     vared -p 'Enter new folder name: ' -c selected_name
     selected="/home/hendrik/Dev/$selected_name"
     mkdir $selected
+    git init $selected
 else
     selected_name=$(basename "$selected" | tr . _)
 fi
